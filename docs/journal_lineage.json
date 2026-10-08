@@ -12,7 +12,7 @@
     "fichier": "docs/sources/PS_20174392719_1491204439457_log-2.csv",
     "granularite": "1 ligne = 1 transaction",
     "sha256": "16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b",
-    "transformations": "Brut inchangé. Contrôles shape, types, valeurs manquantes, doublons et cible. df_model retire newbalanceOrig, newbalanceDest et isFlaggedFraud ; identifiants conservés. Aucun export de df_model.",
+    "transformations": "Notebook d’extraction actuel de la version 1 : brut df inchangé. Contrôles structure, types, valeurs manquantes, doublons et cible binaire. newbalanceOrig, newbalanceDest et isFlaggedFraud identifiées comme variables à risque ; aucune colonne supprimée. Identifiants conservés dans df. Aucun df_model créé ni exporté. Exclusions prévues lors de la préparation du jeu de modélisation.",
     "statut": "Retenue",
     "usage": "Source principale — analyse transactionnelle",
     "date_controle": "04/10/2026",

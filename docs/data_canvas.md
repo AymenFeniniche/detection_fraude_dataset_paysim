@@ -42,7 +42,7 @@ Volume : **6 362 620 lignes et 11 colonnes brutes**.
 
 Variables disponibles dans PaySim avant exécution : `step`, `type`, `amount`, `nameOrig`, `oldbalanceOrg`, `nameDest`, `oldbalanceDest`. Leur disponibilité exacte dans un système réel reste à confirmer.
 
-Variables non disponibles avant exécution : `newbalanceOrig` et `newbalanceDest`. `isFlaggedFraud` est la sortie d’une règle existante et ne doit pas être utilisée comme variable explicative. Ces trois variables sont exclues.
+Variables non disponibles avant exécution : `newbalanceOrig` et `newbalanceDest`. `isFlaggedFraud` est la sortie d’une règle existante et ne doit pas être utilisée comme variable explicative. Ces trois variables seront exclues lors de la préparation du jeu de modélisation. Le notebook d’extraction actuel de la version 1 les identifie mais conserve toutes les colonnes dans le brut `df`.
 
 ## 7. Variables explicatives candidates
 
