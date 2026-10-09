@@ -1,0 +1,12 @@
+variable;type_metier;description;role;disponibilite;decision;justification
+step;Quantitative discrète;Pas temporel horaire de la simulation (valeurs observées : 1 à 743);Variable explicative;Avant exécution, à confirmer en contexte réel;Candidate;Effet temporel à étudier lors de l’EDA.
+type;Qualitative nominale;Type de transaction;Variable explicative;Avant exécution, à confirmer en contexte réel;Candidate;Répartition des fraudes à étudier selon le type de transaction.
+amount;Quantitative continue;Montant de la transaction;Variable explicative;Avant exécution, à confirmer en contexte réel;Candidate;Distribution et valeurs extrêmes à étudier lors de l’EDA.
+nameOrig;Qualitative nominale / identifiant;Identifiant du compte émetteur;Identifiant;Avant exécution;Utilisation brute non recommandée pour le modèle de référence;"Identifiant à forte cardinalité ; présent dans le brut df ; utilisation brute non recommandée."
+oldbalanceOrg;Quantitative continue;Solde du compte émetteur avant la transaction;Variable explicative;Avant exécution, à confirmer en contexte réel;Candidate;Cohérence avec le montant à vérifier.
+newbalanceOrig;Quantitative continue;Solde du compte émetteur après la transaction;Information postérieure;Après exécution;À exclure pour la modélisation;Solde après transaction : fuite temporelle.
+nameDest;Qualitative nominale / identifiant;Identifiant du compte destinataire;Identifiant;Avant exécution;Utilisation brute non recommandée pour le modèle de référence;"Identifiant à forte cardinalité ; présent dans le brut df ; utilisation brute non recommandée."
+oldbalanceDest;Quantitative continue;Solde du destinataire avant la transaction;Variable explicative;Avant exécution, à confirmer en contexte réel;Candidate;Soldes nuls (0) à distinguer des valeurs manquantes.
+newbalanceDest;Quantitative continue;Solde du destinataire après la transaction;Information postérieure;Après exécution;À exclure pour la modélisation;Solde après transaction : fuite temporelle.
+isFraud;Qualitative nominale binaire;Indique si la transaction est frauduleuse;Variable cible;Étiquette de supervision;Cible uniquement;"Jamais une variable explicative ; classes très déséquilibrées."
+isFlaggedFraud;Qualitative nominale binaire;Indicateur provenant d'une règle de détection existante;Sortie de règle;Sortie de règle existante;À exclure pour la modélisation;Ne pas apprendre uniquement la règle antifraude existante.
