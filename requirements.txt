@@ -1,0 +1,13 @@
+pandas
+numpy
+scipy>=1.15
+matplotlib
+scikit-learn
+duckdb
+pyarrow
+joblib
+kagglehub
+openpyxl
+jinja2
+ipywidgets
+ipykernel
