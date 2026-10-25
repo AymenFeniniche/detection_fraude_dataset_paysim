@@ -1,0 +1,64 @@
+{
+  "run_name": "xgboost_cfg1",
+  "run_id": "8657d938bdcd4ef79a97a80f3d21ed89",
+  "famille": "xgboost",
+  "params": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.05,
+    "max_depth": 4,
+    "n_estimators": 300,
+    "subsample": 0.8
+  },
+  "cv_pr_auc_mean": 0.6803787077474098,
+  "cv_pr_auc_std": 0.06164981793800685,
+  "ecart_train_cv": 0.1286673583051523,
+  "eligible_configs": [
+    {
+      "run_name": "xgboost_cfg2",
+      "famille": "xgboost",
+      "params": {
+        "colsample_bytree": 0.8,
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "n_estimators": 500,
+        "subsample": 0.8
+      },
+      "cv_pr_auc_mean": 0.707597104572787,
+      "cv_pr_auc_std": 0.056387978401651766,
+      "ecart_train_cv": 0.25261133666837776,
+      "complexite": 3
+    },
+    {
+      "run_name": "xgboost_cfg3",
+      "famille": "xgboost",
+      "params": {
+        "colsample_bytree": 0.8,
+        "learning_rate": 0.03,
+        "max_depth": 8,
+        "n_estimators": 800,
+        "subsample": 0.8
+      },
+      "cv_pr_auc_mean": 0.703292849915824,
+      "cv_pr_auc_std": 0.05807834115191442,
+      "ecart_train_cv": 0.279193940648945,
+      "complexite": 3
+    },
+    {
+      "run_name": "xgboost_cfg1",
+      "famille": "xgboost",
+      "params": {
+        "colsample_bytree": 0.8,
+        "learning_rate": 0.05,
+        "max_depth": 4,
+        "n_estimators": 300,
+        "subsample": 0.8
+      },
+      "cv_pr_auc_mean": 0.6803787077474098,
+      "cv_pr_auc_std": 0.06164981793800685,
+      "ecart_train_cv": 0.1286673583051523,
+      "complexite": 3
+    }
+  ],
+  "selection_forcee": true,
+  "justification": "cfg1 est éligible (PR-AUC CV 0.6804, dans la limite d'une erreur standard du meilleur 0.7076, seuil 0.6794) ; à performance statistiquement comparable, son écart entraînement/validation est deux fois plus faible (0.129 contre 0.253), le modèle est plus simple (profondeur 4, 300 arbres), plus rapide à entraîner et plus léger à servir en API."
+}

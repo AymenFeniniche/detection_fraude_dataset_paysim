@@ -1,0 +1,24 @@
+{
+  "fraude": {
+    "features": {
+      "type": "CASH_OUT",
+      "amount": 10000000.0,
+      "oldbalanceOrg": 10000000.0,
+      "oldbalanceDest": 0.0,
+      "nb_tx_orig_avant": 0,
+      "nb_recu_dest_avant": 0
+    },
+    "verite_terrain": "fraude"
+  },
+  "legitime": {
+    "features": {
+      "type": "CASH_OUT",
+      "amount": 628777.08,
+      "oldbalanceOrg": 0.0,
+      "oldbalanceDest": 1039155.42,
+      "nb_tx_orig_avant": 0,
+      "nb_recu_dest_avant": 10
+    },
+    "verite_terrain": "legitime"
+  }
+}

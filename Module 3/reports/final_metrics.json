@@ -1,0 +1,86 @@
+{
+  "selected_model": {
+    "famille": "xgboost",
+    "params": {
+      "colsample_bytree": 0.8,
+      "learning_rate": 0.05,
+      "max_depth": 4,
+      "n_estimators": 300,
+      "subsample": 0.8
+    },
+    "run_name": "xgboost_cfg1",
+    "threshold": 0.7386789321899414,
+    "test_metrics": {
+      "PR-AUC": 0.8342676628715138,
+      "Rappel": 0.8861209964412812,
+      "Précision": 0.4095394736842105,
+      "Taux de faux positifs": 0.009820101574681097,
+      "Montant fraudé intercepté": 0.9894738774040794
+    },
+    "bootstrap_ci_95": {
+      "PR-AUC": [
+        0.8139903527608171,
+        0.8558755590789646
+      ],
+      "Rappel": [
+        0.8647905402528844,
+        0.9061503775167785
+      ],
+      "Taux de faux positifs": [
+        0.009339416451463146,
+        0.010347326604936584
+      ]
+    }
+  },
+  "reference_module2": {
+    "famille": "logreg",
+    "params": {
+      "C": 1.0
+    },
+    "threshold": 0.9806310124589599,
+    "test_metrics": {
+      "PR-AUC": 0.34716288245623933,
+      "Rappel": 0.38552787663107946,
+      "Précision": 0.2181208053691275,
+      "Taux de faux positifs": 0.01062248684726414,
+      "Montant fraudé intercepté": 0.9057406054709634
+    },
+    "bootstrap_ci_95": {
+      "PR-AUC": [
+        0.31332094691190815,
+        0.37707011063079227
+      ],
+      "Rappel": [
+        0.353487123735379,
+        0.4167224229414521
+      ],
+      "Taux de faux positifs": [
+        0.010034287991849834,
+        0.011194990207309246
+      ]
+    },
+    "module2_reference": {
+      "PR-AUC": 0.347,
+      "Rappel": 0.386,
+      "Taux de faux positifs": 0.0106,
+      "Montant fraudé intercepté": 0.906
+    },
+    "ecarts_absolus": {
+      "PR-AUC": 0.00016288245623935493,
+      "Rappel": 0.00047212336892055173,
+      "Taux de faux positifs": 2.2486847264139437e-05,
+      "Montant fraudé intercepté": 0.0002593945290366717
+    }
+  },
+  "sizes": {
+    "train": 335288,
+    "validation": 109304,
+    "test": 110516
+  },
+  "test_confusion_matrix_selected": {
+    "true_negative": 108596,
+    "false_positive": 1077,
+    "false_negative": 96,
+    "true_positive": 747
+  }
+}

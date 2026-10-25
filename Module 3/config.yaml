@@ -1,0 +1,35 @@
+project:
+  name: paysim-fraude-module3
+  random_state: 42
+data:
+  path: "../paysim_echantillon.parquet"   # relatif au dossier Module 3
+  target: isFraud
+  time_col: step
+split:
+  train_max_step: 281
+  val_max_step: 354
+  expected_sizes: {train: 335288, val: 109304, test: 110516}
+features:
+  numeric: [amount, oldbalanceOrg, oldbalanceDest, nb_tx_orig_avant, nb_recu_dest_avant]
+  categorical: [type]
+  excluded: [tx_id, step, heure, newbalanceOrig, newbalanceDest, isFlaggedFraud, nameOrig, nameDest]
+evaluation:
+  max_false_positive_rate: 0.01
+  primary_metric: average_precision
+  cv_splits: 4          # TimeSeriesSplit sur le train
+mlflow:
+  tracking_uri: "sqlite:///mlflow.db"
+  experiment_name: paysim-module3
+models:
+  logreg:
+    - {C: 0.1}
+    - {C: 1.0}
+    - {C: 10.0}
+  random_forest:
+    - {n_estimators: 200, max_depth: 8,  min_samples_leaf: 50, max_features: sqrt}
+    - {n_estimators: 300, max_depth: 12, min_samples_leaf: 20, max_features: sqrt}
+    - {n_estimators: 200, max_depth: 16, min_samples_leaf: 5,  max_features: 0.5}
+  xgboost:
+    - {n_estimators: 300, max_depth: 4, learning_rate: 0.05, subsample: 0.8, colsample_bytree: 0.8}
+    - {n_estimators: 500, max_depth: 6, learning_rate: 0.05, subsample: 0.8, colsample_bytree: 0.8}
+    - {n_estimators: 800, max_depth: 8, learning_rate: 0.03, subsample: 0.8, colsample_bytree: 0.8}

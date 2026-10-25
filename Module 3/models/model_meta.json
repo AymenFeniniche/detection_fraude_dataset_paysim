@@ -1,0 +1,34 @@
+{
+  "famille": "xgboost",
+  "params": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.05,
+    "max_depth": 4,
+    "n_estimators": 300,
+    "subsample": 0.8
+  },
+  "seuil": 0.7386789321899414,
+  "features_numeric": [
+    "amount",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "nb_tx_orig_avant",
+    "nb_recu_dest_avant"
+  ],
+  "features_categorical": [
+    "type"
+  ],
+  "type_values": [
+    "CASH_OUT",
+    "TRANSFER"
+  ],
+  "versions": {
+    "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+    "scikit_learn": "1.9.0",
+    "xgboost": "3.2.0",
+    "pandas": "2.3.3",
+    "numpy": "2.4.3"
+  },
+  "date_utc": "2026-10-24T20:39:40.730476+00:00",
+  "run_name": "xgboost_cfg1"
+}

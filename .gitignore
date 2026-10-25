@@ -220,3 +220,7 @@ __marimo__/
 # Données locales
 *.parquet
 !paysim_echantillon.parquet
+
+# Module 3 - environnement et suivi local
+mlruns/
+mlflow.db
